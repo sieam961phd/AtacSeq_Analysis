@@ -21,10 +21,10 @@ Sequencing adapters were trimmed using cutadapt in paired-end mode, requiring a 
 Trimmed PE reads were mapped to the hg19 genome using bowtie2 in --very-sensitive mode to prioritise alignment accuracy. 
 
 # Filtering
-Mapped reads were converted into bam files using samtools and were filtered to remove unmapped reads or reads with a Q score of less than 30. Only properly aligned PE reads were retained. Mitochondrial reads and reads mapping to random contigs using sed. Duplicate reads were removed using picard MarkDuplicates function.  
+Mitochondrial reads and reads mapping to random contigs were removed from sam files using sed. Mapped reads were then converted into bam files using samtools and were filtered to remove unmapped reads or reads with a Q score of less than 30. Only properly aligned PE reads were retained. Duplicate reads were removed using picard MarkDuplicates function.  
 
 # Check Insert Size
-Fragment size distribution was performed by Picard CollectInsertSizeMetrics function to assess the quality of the Atac-Seq experiment. 
+Fragment size distribution was performed on sorted bam files using the Picard CollectInsertSizeMetrics function to assess the quality of the Atac-Seq experiment. 
 
 # Peak Calling
 Peaks were called in with Genrich in multi-mapping Atac-Seq mode.
