@@ -2,15 +2,7 @@
 Atac-Seq was performed on MCF7, with two biological replicates to assess the role of cohesin in the epigenetic regulation of the 6q25.1 locus. Knockdown of the Rad21 subunit of the cohesin complex was achieved through siRNA. A non-targeting siRNA was used as a control. The library was sequenced as paired-end reads with Illumina HiSeq by New Zealand Genomics Limited (NZGL). Demultiplexing was also performed by NZGL.
 
 # Software
--FastQC v0.11.8
--multiqc 1.13.dev0
--cutadapt 1.18
--bowtie2 2.5.0
--samtools 1.15.1
--sed 4.2.2
--picard 2.27.4
--Genrich, version 0.6.1
--bedtools v2.30.0
+FastQC v0.11.8, multiqc 1.13.dev0, cutadapt 1.18, bowtie2 2.5.0, samtools 1.15.1, sed 4.2.2, picard 2.27.4, Genrich 0.6.1, bedtools v2.30.0
 
 # Quality Control
 FastQC was used to assess read quality and MultiQC was used to compare quality metrics between samples before and after read processing.   
